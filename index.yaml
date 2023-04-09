@@ -22,7 +22,7 @@ entries:
           url: https://github.com/jenkinsci/helm-charts/issues
     apiVersion: v2
     appVersion: 2.387.2
-    created: "2023-04-09T09:36:35.51824-04:00"
+    created: "2023-04-09T09:40:20.563363-04:00"
     description: Jenkins - Build great things at any scale! The leading open source
       automation server, Jenkins provides hundreds of plugins to support building,
       deploying and automating any project.
@@ -56,7 +56,7 @@ entries:
   mongodb:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-04-09T09:36:35.521215-04:00"
+    created: "2023-04-09T09:40:20.563984-04:00"
     description: A Helm chart for mongodb
     digest: d0d21b00bb7d221a1b18772da590b7f073abcb3c9ccac19ed37d496dfac11b6b
     name: mongodb
@@ -67,7 +67,7 @@ entries:
   myapp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-04-09T09:36:35.521835-04:00"
+    created: "2023-04-09T09:40:20.564574-04:00"
     description: A Helm chart for Kubernetes
     digest: f31c994357d6c8b27fb85e9790734c231308f6944581ae567f5fdd0aa3007237
     name: myapp
@@ -75,4 +75,20 @@ entries:
     urls:
     - myapp-0.1.3.tgz
     version: 0.1.3
-generated: "2023-04-09T09:36:35.514318-04:00"
+  nodeapp:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-04-09T09:40:20.565259-04:00"
+    dependencies:
+    - condition: mongodb.enabled
+      name: mongodb
+      repository: https://lwplabs.github.io/lwplabs-charts/
+      version: 0.1.2
+    description: A Helm chart for NodeJs Application
+    digest: 4acb7a8ff075c671fbb65e63b3555534d19b2aaa48f96e4d457399706ae43c38
+    name: nodeapp
+    type: application
+    urls:
+    - nodeapp-0.1.3.tgz
+    version: 0.1.3
+generated: "2023-04-09T09:40:20.557149-04:00"
